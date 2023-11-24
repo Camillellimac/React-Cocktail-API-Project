@@ -25,39 +25,3 @@ function CocktailRandomPage () {
 
 export default CocktailRandomPage;
 
-
-
-
-
-
-
-
-// import { useState } from "react";
-
-// function CocktailRandomPage () {
-
-//     const [cocktailRandom, setCocktailRandom] = useState(null)
-    
-//     if (!cocktailRandom) {
-//     (async () => {
-//         const randomResponseAPI = await fetch("www.thecocktaildb.com/api/json/v1/1/random.php")
-//         const randomResponseJson = await randomResponseAPI.json()
-//         setCocktailRandom(randomResponseJson.drinks[0])
-//     })();
-//     }
-
-//     return (
-
-//         <main>
-//             {cocktailRandom ? (
-//                 <>
-//                 <h3>{cocktailRandom.strDrink}</h3>
-//                 </>
-//             ) : (
-//                 <p>Loading</p>
-//             )}
-//         </main>
-//     )
-// }
-
-// export default CocktailRandomPage;
