@@ -2,7 +2,7 @@ import { useState } from "react";
 
 function CocktailsPage () {
 
-    const [cocktails, setCocktails] = useState()
+    const [cocktails, setCocktails] = useState(null)
 
     if(!cocktails) { // le fetch est lancé que s'il n'a pas déjà été chargé (que la valeur de drinks est vide)
  
