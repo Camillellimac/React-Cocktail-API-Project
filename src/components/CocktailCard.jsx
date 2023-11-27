@@ -10,7 +10,7 @@ function CocktailsCard ({cocktailToDisplay}) {
  
   const handleDeleteCocktail = async (event, id) => {
      {/* 
-            5. J'utilise fetch pour faire un appel à la BDD/API via un fake url (supposons
+            5. J'utilise fetch pour faire un appel à l'API/au serveur via un fake url (supposons
             que je sois admin et que le lien soit fonctionnel)
             6. J'ajoute après l'url l'id (soit directement "+ id" soit avec String)
             7. J'indique que la méthode que je souhaite utiliser en lien avec cet appel fetch 
