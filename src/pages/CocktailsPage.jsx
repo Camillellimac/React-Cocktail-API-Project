@@ -10,12 +10,10 @@ function CocktailsPage () {
         .then((responseAPI) => { // on utilise .then pour gérer la réponse de l'API 
             return responseAPI.json() // on convertit la data retournée en json
         })
-
         .then((json) => {  // .then gère la data en json et la rend accessible
             setCocktails(json.drinks) // on affiche en console la data récupérée dans le useState 
             console.log(json.drinks)
         })
-
     }
 
     return (
