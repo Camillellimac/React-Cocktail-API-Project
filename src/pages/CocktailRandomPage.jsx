@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import CocktailsCard from "../components/CocktailCard";
 
 function CocktailRandomPage () {
 
@@ -18,8 +19,7 @@ function CocktailRandomPage () {
         <main> 
             {cocktailRandom ? // si cocktailRandom a été récupéré 
             <>
-            <h3>{cocktailRandom.strDrink}</h3> {/* afficher la propriété .strDrink  */} 
-            <img src={cocktailRandom.strDrinkThumb} alt={cocktailRandom.strDrink} />
+            <CocktailsCard cocktailToDisplay={cocktailRandom}/>
             </>
             : 
             <p>Loading</p>} {/* sinon afficher cette balise */}
