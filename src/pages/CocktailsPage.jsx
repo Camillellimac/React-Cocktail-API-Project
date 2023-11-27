@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import CocktailsCard from "../components/CocktailCard";
 
 function CocktailsPage () {
 
@@ -26,11 +27,7 @@ function CocktailsPage () {
                 {cocktails.map((drinks) => { // je boucle sur la data avec map 
                     return (
                         <>
-
-                        <Link to = {`/drinks/${drinks.idDrink}`}><h3>{drinks.strDrink}</h3></Link>    {/* je demande de récupérer et rendre la propriété .strDrink du tableau */}
-                        <img src={drinks.strDrinkThumb} alt={drinks.strDrink} />  {/* je récupére l'img' */}
-                        <p>{drinks.strInstructions}</p>  {/* idem je récupére les instructions */}
-                        
+                            <CocktailsCard cocktailToDisplay={drinks}/>
                         </>
                     )
                 })}
