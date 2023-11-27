@@ -6,14 +6,13 @@ function CocktailsIngredientsPage () {
     useEffect(() => {
         (async () => {
             const IngredientsApiResponse = await fetch ('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list')
-            const IngredientsJsonResponse = IngredientsApiResponse.json()
+            const IngredientsJsonResponse = await IngredientsApiResponse.json()
             setIngredients(IngredientsJsonResponse.drinks)
+
+            console.log(setIngredients)
+
         })();
     },[])
-
-   
-
-    console.log(setIngredients)
     
 
     return (
@@ -23,7 +22,7 @@ function CocktailsIngredientsPage () {
                 {ingredients.map((ingredient) => {
                     return (
                         <>
-                        {ingredient.strCategory}
+                       <p>{ingredient.strIngredient1}</p> 
                         </>
                     )
                 })}
