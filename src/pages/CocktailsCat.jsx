@@ -35,5 +35,3 @@ function CocktailsCat () {
 }
 
 export default CocktailsCat; 
-
-// les coms seront ajoutés après l'advil en perf 

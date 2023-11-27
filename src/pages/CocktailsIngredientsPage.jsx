@@ -1,14 +1,17 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 function CocktailsIngredientsPage () {
 
     const [ingredients, setIngredients] = useState(null)
+    useEffect(() => {
+        (async () => {
+            const IngredientsApiResponse = await fetch ('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list')
+            const IngredientsJsonResponse = IngredientsApiResponse.json()
+            setIngredients(IngredientsJsonResponse.drinks)
+        })();
+    },[])
 
-    (async () => {
-        const IngredientsApiResponse = await fetch ('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list')
-        const IngredientsJsonResponse = IngredientsApiResponse.json()
-        setIngredients(IngredientsJsonResponse.drinks)
-    })();
+   
 
     console.log(setIngredients)
     
@@ -36,5 +39,3 @@ function CocktailsIngredientsPage () {
 export default CocktailsIngredientsPage;
 
 
-// le rendu ne fonctionne pas 
-// erreur : Uncaught TypeError: (0 , react__WEBPACK_IMPORTED_MODULE_0__.useState)(...) is not a function
